@@ -199,3 +199,34 @@ function initChecklistPage(){
 }
 
 function escapeHtml(s){ return s.replaceAll('<','&lt;').replaceAll('>','&gt;'); }
+
+
+
+// === Page Fade Transition ===
+document.addEventListener("DOMContentLoaded", () => {
+  const pages = document.querySelectorAll(".page");
+  const links = document.querySelectorAll("nav a");
+
+  function showPage(id) {
+    pages.forEach(p => p.classList.remove("active"));
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.add("active");
+    }
+  }
+
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      if (link.getAttribute("href").startsWith("#")) {
+        e.preventDefault();
+        const pageId = link.getAttribute("href").substring(1);
+        showPage(pageId);
+      }
+    });
+  });
+
+  // Show first page by default
+  if (pages.length > 0) {
+    pages[0].classList.add("active");
+  }
+});

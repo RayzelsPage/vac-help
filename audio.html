@@ -7,15 +7,15 @@
 <body>
 <header class="navbar"><div class="nav-left">HVAC Helper</div><nav class="nav-right"><a href="index.html">Home</a><a href="audio.html">Record Audio</a><a href="#" id="login-link">Login</a></nav></header>
 
-<section class="hero small" style="background-image:url('https://images.unsplash.com/photo-1605902711745-91c1f7e4eaff?auto=format&fit=crop&w=1600&q=80')"><div class="hero-overlay fade-in"><h1>Record Audio</h1><p class="lead">Record sounds (hiss, rattle) to review later.</p></div></section>
+<section class="hero small" style="background-image:url('https://images.unsplash.com/photo-1605902711745-91c1f7e4eaff?auto=format&fit=crop&w=1600&q=80')"><div class="hero-overlay"><h1>Record Audio</h1><p class="lead">Record sounds (hiss, rattle) to review later.</p></div></section>
 
-<main class="content glass fade-in">
+<main class="content glass">
   <div class="panel">
     <h3>Recorder</h3>
     <div class="controls">
-      <button id="startAudio" class="rounded">Start Recording</button>
-      <button id="stopAudio" disabled class="rounded">Stop</button>
-      <a id="downloadAudio" class="btn-secondary hidden rounded" download="hvac-audio.webm">Download Audio</a>
+      <button id="startAudio">Start Recording</button>
+      <button id="stopAudio" disabled>Stop</button>
+      <a id="downloadAudio" class="btn-secondary hidden" download="hvac-audio.webm">Download Audio</a>
     </div>
     <div id="audioClips"></div>
     <p class="muted">Tip: record in quiet environment and get microphone close to source.</p>

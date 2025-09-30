@@ -7,16 +7,16 @@
 <body>
 <header class="navbar"><div class="nav-left">HVAC Helper</div><nav class="nav-right"><a href="index.html">Home</a><a href="video.html">Record Video</a><a href="#" id="login-link">Login</a></nav></header>
 
-<section class="hero small" style="background-image:url('https://images.unsplash.com/photo-1629909613654-29a58c1272b4?auto=format&fit=crop&w=1600&q=80')"><div class="hero-overlay fade-in"><h1>Record Video</h1><p class="lead">Capture a short clip showing the issue or noise.</p></div></section>
+<section class="hero small" style="background-image:url('https://images.unsplash.com/photo-1629909613654-29a58c1272b4?auto=format&fit=crop&w=1600&q=80')"><div class="hero-overlay"><h1>Record Video</h1><p class="lead">Capture a short clip showing the issue or noise.</p></div></section>
 
-<main class="content glass fade-in">
+<main class="content glass">
   <div class="tool-grid">
     <div class="panel">
       <video id="videoPreview" autoplay playsinline class="camera-preview"></video>
       <div class="controls">
-        <button id="startRecord" class="rounded">Start Recording</button>
-        <button id="stopRecord" disabled class="rounded">Stop</button>
-        <a id="downloadVideo" class="btn-secondary hidden rounded" download="hvac-video.webm">Download Video</a>
+        <button id="startRecord">Start Recording</button>
+        <button id="stopRecord" disabled>Stop</button>
+        <a id="downloadVideo" class="btn-secondary hidden" download="hvac-video.webm">Download Video</a>
       </div>
     </div>
     <div class="panel">
