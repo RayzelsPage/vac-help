@@ -1,86 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rayzel & Hannah — HVAC Helper</title>
-  <link rel="icon" type="image/png" href="assets/logo.jpg">
-  <link rel="manifest" href="manifest.json">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/4b2e8a4d5e.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HVAC Helper — Home</title>
+<link href="styles.css" rel="stylesheet">
+<script src="app.js" defer></script>
 </head>
 <body>
-  <div id="splash-screen" class="splash">
-    <div class="splash-card">
-      <img src="assets/logo.jpg" alt="logo" class="splash-logo">
-      <h1>Rayzel & Hannah’s HVAC Helper</h1>
-      <p class="muted">Pro apprentice assistant</p>
-    </div>
-  </div>
-
-  <div id="login-screen" class="center-screen hidden">
-    <div class="glass-card login-card">
-      <img src="assets/logo.jpg" class="brand-logo" alt="logo">
-      <h2>Welcome back, Rayzel</h2>
-      <p class="muted">Enter Rayzel’s apprentice login</p>
-
-      <input id="username" placeholder="Username" aria-label="username">
-      <input id="password" type="password" placeholder="Password" aria-label="password">
-      <button id="login-btn" class="btn-primary">Sign in</button>
-      <p id="login-error" class="error hidden">Invalid username or password</p>
-      <div class="small muted">© Rayzel & Hannah HVAC Solutions</div>
-    </div>
-  </div>
-
-  <div id="app" class="hidden">
-    <header class="app-header">
-      <div class="brand">
-        <img src="assets/logo.jpg" class="logo-small" alt="logo">
-        <div>
-          <div class="title">Rayzel & Hannah’s HVAC Helper</div>
-          <div class="tag">Built for Rayzel — Apprentice Mode</div>
-        </div>
+<header class="navbar">
+  <div class="nav-left">HVAC Helper</div>
+  <nav class="nav-right">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Tools ▾</button>
+      <div class="dropdown-content">
+        <a href="photo.html">Take Photo</a>
+        <a href="video.html">Record Video</a>
+        <a href="upload.html">Upload File</a>
+        <a href="audio.html">Record Audio</a>
+        <a href="checklist.html">Checklist</a>
       </div>
-      <div class="header-actions">
-        <button id="logout-btn" class="btn-ghost">Logout</button>
-      </div>
-    </header>
+    </div>
+    <a href="#" id="login-link">Login</a>
+  </nav>
+</header>
 
-    <main class="container">
-      <section class="grid">
-        <div class="card action-card" onclick="openCamera()">
-          <i class="fas fa-camera"></i>
-          <span>Take Photo</span>
-        </div>
-        <div class="card action-card" onclick="openVideo()">
-          <i class="fas fa-video"></i>
-          <span>Record Video</span>
-        </div>
-        <div class="card action-card" onclick="uploadFile()">
-          <i class="fas fa-upload"></i>
-          <span>Upload File</span>
-        </div>
-        <div class="card action-card" onclick="recordAudio()">
-          <i class="fas fa-microphone"></i>
-          <span>Record Audio</span>
-        </div>
-        <div class="card action-card" onclick="showChecklist()">
-          <i class="fas fa-tasks"></i>
-          <span>Checklist</span>
-        </div>
-      </section>
-
-      <section class="card info-card" id="output">
-        <h3>Quick Tips</h3>
-        <p class="muted">Use the tools above to capture photos, videos, or audio. The app will guide you step-by-step.</p>
-      </section>
-    </main>
-    <footer class="app-footer">
-      <div>⚡ Powered by Rayzel & Hannah HVAC Solutions</div>
-    </footer>
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1581090700227-4c4f88f23b6d?auto=format&fit=crop&w=1600&q=80')">
+  <div class="hero-overlay">
+    <h1>Rayzel & Hannah’s HVAC Helper</h1>
+    <p class="lead">Apprentice made easy — capture photos, videos, audio and create job checklists.</p>
+    <a class="btn-primary" id="cta-login">Login to Start</a>
   </div>
+</section>
 
-  <script src="app.js" defer></script>
+<section class="features">
+  <div class="feature">
+    <h3>📷 Take Photo</h3>
+    <p>Snap pictures of HVAC units and label the problem areas.</p>
+  </div>
+  <div class="feature">
+    <h3>🎥 Record Video</h3>
+    <p>Record short videos to capture behavior or sounds in context.</p>
+  </div>
+  <div class="feature">
+    <h3>📂 Upload Files</h3>
+    <p>Upload manuals, diagrams, or saved diagnostic images.</p>
+  </div>
+  <div class="feature">
+    <h3>🎤 Record Audio</h3>
+    <p>Capture hissing, rattling, or other unusual sounds for analysis.</p>
+  </div>
+  <div class="feature">
+    <h3>✅ Checklist</h3>
+    <p>Create step-by-step job checklists and export them to PDF.</p>
+  </div>
+</section>
+
+<footer class="footer">© 2025 Rayzel & Hannah HVAC Helper</footer>
 </body>
 </html>

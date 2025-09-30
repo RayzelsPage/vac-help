@@ -1,20 +1,15 @@
 {
-  "name": "Rayzel & Hannah HVAC Helper",
-  "short_name": "HVAC Helper",
+  "name": "HVAC Helper",
+  "short_name": "HVAC",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#06203a",
+  "background_color": "#071428",
   "theme_color": "#0b6efd",
   "icons": [
     {
-      "src": "assets/logo.jpg",
+      "src": "assets/icon-192.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "assets/logo.jpg",
-      "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ]
 }
