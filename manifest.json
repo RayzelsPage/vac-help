@@ -1,0 +1,13 @@
+{
+  "name": "Rayzel & Hannah HVAC Helper",
+  "short_name": "HVAC Helper",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "HVAC Helper tool for Rayzel.",
+  "icons": [{
+    "src": "assets/logo.jpg",
+    "sizes": "192x192",
+    "type": "image/jpeg"
+  }]
+}
