@@ -5,5 +5,6 @@ self.addEventListener('activate', (e) => {
   console.log('Service Worker: Activated');
 });
 self.addEventListener('fetch', (e) => {
-  console.log('Service Worker: Fetching', e.request.url);
+  // network-first for dynamic content; simple cache strategy could be added
+  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
 });

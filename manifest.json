@@ -3,11 +3,18 @@
   "short_name": "HVAC Helper",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "description": "HVAC Helper tool for Rayzel.",
-  "icons": [{
-    "src": "assets/logo.jpg",
-    "sizes": "192x192",
-    "type": "image/jpeg"
-  }]
+  "background_color": "#06203a",
+  "theme_color": "#0b6efd",
+  "icons": [
+    {
+      "src": "assets/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
 }

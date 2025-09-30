@@ -1,46 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rayzel & Hannah HVAC Helper</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="manifest" href="manifest.json" />
-  <script defer src="app.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rayzel & Hannah — HVAC Helper</title>
+  <link rel="icon" type="image/png" href="assets/logo.jpg">
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4b2e8a4d5e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="splash-screen">
-    <img src="assets/logo.jpg" alt="Logo" class="logo" />
-    <h1>Welcome back, Rayzel 👋</h1>
-  </div>
-
-  <div id="login-screen" class="hidden">
-    <div class="login-box">
-      <h2>Enter Rayzel’s apprentice login</h2>
-      <input type="text" id="username" placeholder="Username" />
-      <input type="password" id="password" placeholder="Password" />
-      <button id="login-btn">Login</button>
-      <p id="login-error" class="error hidden">Invalid username or password</p>
+  <div id="splash-screen" class="splash">
+    <div class="splash-card">
+      <img src="assets/logo.jpg" alt="logo" class="splash-logo">
+      <h1>Rayzel & Hannah’s HVAC Helper</h1>
+      <p class="muted">Pro apprentice assistant</p>
     </div>
   </div>
 
-  <div id="main-app" class="hidden">
-    <header>
-      <img src="assets/logo.jpg" alt="Logo" class="logo small" />
-      <h2>Rayzel & Hannah HVAC Helper</h2>
-      <button id="logout-btn">Logout</button>
-    </header>
-    <main>
-      <h3>What would you like to do?</h3>
-      <div class="options">
-        <button onclick="openCamera()">📷 Take Photo</button>
-        <button onclick="openVideo()">🎥 Record Video</button>
-        <button onclick="uploadFile()">📂 Upload File</button>
-        <button onclick="recordAudio()">🎙️ Record Audio</button>
-        <button onclick="showChecklist()">✅ Checklist</button>
-      </div>
-      <div id="output"></div>
-    </main>
+  <div id="login-screen" class="center-screen hidden">
+    <div class="glass-card login-card">
+      <img src="assets/logo.jpg" class="brand-logo" alt="logo">
+      <h2>Welcome back, Rayzel</h2>
+      <p class="muted">Enter Rayzel’s apprentice login</p>
+
+      <input id="username" placeholder="Username" aria-label="username">
+      <input id="password" type="password" placeholder="Password" aria-label="password">
+      <button id="login-btn" class="btn-primary">Sign in</button>
+      <p id="login-error" class="error hidden">Invalid username or password</p>
+      <div class="small muted">© Rayzel & Hannah HVAC Solutions</div>
+    </div>
   </div>
+
+  <div id="app" class="hidden">
+    <header class="app-header">
+      <div class="brand">
+        <img src="assets/logo.jpg" class="logo-small" alt="logo">
+        <div>
+          <div class="title">Rayzel & Hannah’s HVAC Helper</div>
+          <div class="tag">Built for Rayzel — Apprentice Mode</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="logout-btn" class="btn-ghost">Logout</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="grid">
+        <div class="card action-card" onclick="openCamera()">
+          <i class="fas fa-camera"></i>
+          <span>Take Photo</span>
+        </div>
+        <div class="card action-card" onclick="openVideo()">
+          <i class="fas fa-video"></i>
+          <span>Record Video</span>
+        </div>
+        <div class="card action-card" onclick="uploadFile()">
+          <i class="fas fa-upload"></i>
+          <span>Upload File</span>
+        </div>
+        <div class="card action-card" onclick="recordAudio()">
+          <i class="fas fa-microphone"></i>
+          <span>Record Audio</span>
+        </div>
+        <div class="card action-card" onclick="showChecklist()">
+          <i class="fas fa-tasks"></i>
+          <span>Checklist</span>
+        </div>
+      </section>
+
+      <section class="card info-card" id="output">
+        <h3>Quick Tips</h3>
+        <p class="muted">Use the tools above to capture photos, videos, or audio. The app will guide you step-by-step.</p>
+      </section>
+    </main>
+    <footer class="app-footer">
+      <div>⚡ Powered by Rayzel & Hannah HVAC Solutions</div>
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
