@@ -7,17 +7,17 @@
 <body>
 <header class="navbar"><div class="nav-left">HVAC Helper</div><nav class="nav-right"><a href="index.html">Home</a><a href="photo.html">Take Photo</a><a href="#" id="login-link">Login</a></nav></header>
 
-<section class="hero small" style="background-image:url('https://images.unsplash.com/photo-1605902711622-cfb43c4437f6?auto=format&fit=crop&w=1600&q=80')"><div class="hero-overlay"><h1>Take Photo</h1><p class="lead">Point your device at the unit and take a clear picture of the problem area.</p></div></section>
+<section class="hero small" style="background-image:url('https://images.unsplash.com/photo-1605902711622-cfb43c4437f6?auto=format&fit=crop&w=1600&q=80')"><div class="hero-overlay fade-in"><h1>Take Photo</h1><p class="lead">Point your device at the unit and take a clear picture of the problem area.</p></div></section>
 
-<main class="content glass">
+<main class="content glass fade-in">
   <div class="tool-grid">
     <div class="panel">
       <video id="cameraVideo" autoplay playsinline class="camera-preview"></video>
       <canvas id="photoCanvas" class="hidden"></canvas>
       <div class="controls">
-        <button id="startCamera">Start Camera</button>
-        <button id="takePhoto" disabled>Take Photo</button>
-        <a id="downloadPhoto" class="btn-secondary hidden" download="hvac-photo.jpg">Download Photo</a>
+        <button id="startCamera" class="rounded">Start Camera</button>
+        <button id="takePhoto" disabled class="rounded">Take Photo</button>
+        <a id="downloadPhoto" class="btn-secondary hidden rounded" download="hvac-photo.jpg">Download Photo</a>
       </div>
     </div>
     <div class="panel">
